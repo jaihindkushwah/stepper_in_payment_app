@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ReactNode } from "react";
+import AllStepper from "./components/AllStepper";
 
-function App() {
+type Props = {};
+export type stepType = {
+  title: string;
+  component: () => ReactNode;
+};
+
+const allStepData: stepType[] = [
+    {
+        title: "Step 1",
+        component:()=><div>Step 1</div>
+    },{
+        title: "Step 2",
+        component:()=><div>Step 2</div>
+    },
+    {
+        title: "Step 3",
+        component:()=><div>Step 3</div>
+    },
+    {
+        title: "Step 4",
+        component:()=><div>Step 4</div>
+    },
+    {
+        title: "Step 5",
+        component:()=><div>Step 5</div>
+    }
+];
+
+const App = (props: Props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen min-h-screen">
+      <AllStepper data={allStepData} />
     </div>
   );
-}
+};
 
 export default App;
