@@ -14,8 +14,8 @@ const Step=forwardRef<HTMLDivElement,Props>((props,ref)=> {
       <p
         ref={ref}
         className={
-          "rounded-full bg-slate-500 p-3 text-center " +
-          (isComplete ? " bg-green-500 text-white pr-5 pl-5" : "pr-5 pl-6 text-center")
+          "rounded-full p-3 text-center " +
+          (isComplete ? " bg-green-500 text-white pr-5 pl-5" : "pr-5 bg-slate-500 pl-6 text-center")
         }
       >
         {isComplete ? (

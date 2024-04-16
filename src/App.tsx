@@ -10,22 +10,22 @@ export type stepType = {
 const allStepData: stepType[] = [
     {
         title: "Step 1",
-        component:()=><div>Step 1</div>
+        component:()=><div>Personal Info</div>
     },{
         title: "Step 2",
-        component:()=><div>Step 2</div>
+        component:()=><div>Payment</div>
     },
     {
         title: "Step 3",
-        component:()=><div>Step 3</div>
+        component:()=><div>Delivery Address</div>
     },
     {
         title: "Step 4",
-        component:()=><div>Step 4</div>
+        component:()=><div>Review</div>
     },
     {
         title: "Step 5",
-        component:()=><div>Step 5</div>
+        component:()=><div>Confirm to pay</div>
     }
 ];
 

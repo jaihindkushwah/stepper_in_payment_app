@@ -13,7 +13,9 @@ const AllStepper = (props: Props) => {
   const { data } = props;
 
   useEffect(()=>{
+
     setMargin(refs?.current[0]?.offsetWidth || 0);
+
   },[refs]);
   const bgPercentage = (curIndex / (data.length-1)) * 100;
 
@@ -40,7 +42,7 @@ const AllStepper = (props: Props) => {
         <div
           className={` h-[3px] rounded-sm absolute top-10 z-10`}
           style={{
-            background: `linear-gradient(to right,rgb(34 197 94)  calc(${bgPercentage}%), rgb(100,116,139)calc(${bgPercentage}%)`,
+            background: `linear-gradient(to right,rgb(34 197 94) calc(${bgPercentage}%), rgb(100,116,139)calc(${bgPercentage}%)`,
             width: `calc(100% - ${2*margins}px)`,
           }}
         ></div>
@@ -48,7 +50,7 @@ const AllStepper = (props: Props) => {
       <div>
         {curIndex < data.length ? (
           <button
-            className="text-white bg-slate-500 rounded-sm p-3 pl-7 pr-7"
+            className="text-black bg-gray-300 rounded-full p-3 pl-10 pr-10 font-bold"
             onClick={() => setCurIndex(curIndex + 1)}
           >
             Next
